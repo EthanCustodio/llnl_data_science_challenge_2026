@@ -25,7 +25,7 @@ def skeletonize_mask(file_path, output_path):
         mask = mask > 0
 
     print("Extracting skeleton (this may take a moment for 3D data)...")
-    skeleton = skeletonize(mask)
+    skeleton = skeletonize(mask, method='lee')
     
     print(f"Skeleton extracted. Non-zero voxels: {np.count_nonzero(skeleton)}")
     
